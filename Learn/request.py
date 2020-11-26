@@ -69,22 +69,22 @@ ax3.set_ylabel('房屋总价')
 plt.show()
 
 
-f, [ax1,ax2] = plt.subplots(1, 2, figsize=(15, 5))
-# 建房时间的分布情况
-sns.distplot(df['Size'], bins=20, ax=ax1, color='r')
-sns.kdeplot(df['Size'], shade=True, ax=ax1)
-# 建房时间和出售价格的关系
-sns.regplot(x='Size', y='Price', data=df, ax=ax2)
-plt.show()
+# f, [ax1,ax2] = plt.subplots(1, 2, figsize=(15, 5))
+# # 建房时间的分布情况
+# sns.distplot(df['Size'], bins=20, ax=ax1, color='r')
+# sns.kdeplot(df['Size'], shade=True, ax=ax1)
+# # 建房时间和出售价格的关系
+# sns.regplot(x='Size', y='Price', data=df, ax=ax2)
+# plt.show()
 
 
-f, ax1= plt.subplots(figsize=(20,20))
-sns.countplot(y='Layout', data=df, ax=ax1)
-ax1.set_title('房屋户型',fontsize=15)
-ax1.set_xlabel('数量')
-ax1.set_ylabel('户型')
-plt.show()
+# f, ax1= plt.subplots(figsize=(20,20))
+# sns.countplot(y='Layout', data=df, ax=ax1)
+# ax1.set_title('房屋户型',fontsize=15)
+# ax1.set_xlabel('数量')
+# ax1.set_ylabel('户型')
+# plt.show()
 
 
-display(df['Renovation'].value_counts())
+# display(df['Renovation'].value_counts())
 
