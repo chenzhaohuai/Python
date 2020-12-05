@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib as mpl
+import os
 
 import matplotlib.pyplot as plt
 from IPython.display import display
@@ -15,13 +16,18 @@ plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
 
 display(mpl.matplotlib_fname())
 
+print("当前路径 -> %s" , os.getcwd())
+current_path = os.path.dirname(__file__)
+print("current_path -> %s", current_path)
+
+
 from sys import version_info
 if version_info.major != 3:
     raise Exception('请使用Python 3 来完成此项目')
 
 
 # 导入知乎数据
-zhihu_df = pd.read_csv('zhihu.csv')
+zhihu_df = pd.read_csv(current_path + '/zhihu.csv')
 display(zhihu_df.head(n=2))
 
 display(zhihu_df.describe())

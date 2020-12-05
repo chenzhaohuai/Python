@@ -1,8 +1,7 @@
 # encoding: utf-8
-# !/usr/bin/python3
+#!/Uers/dev_czh/.pyenv/shims/python
 
 import re
-import os
 import time
 import json
 import requests
@@ -62,8 +61,6 @@ def get_page_info(link, f):
 if __name__ == '__main__':
     # file = 'fileSearchGithub.txt'
     # f = open.file(file,'w')
-
-    os.system("pause")
     while True:
         search = input('请输入Github查找的信息：').strip()
         fileName = search + '.txt'
