@@ -52,7 +52,6 @@ class Taobao:
                 shop_price_list.append(shop_price.text.strip())
 
 			#购买人数
-
             shop_purchase_sum = shop_data.find_all('div',class_='deal-cnt')
             for shop_purchase in shop_purchase_sum:
                 shop_person_list.append(shop_purchase.text.strip())
