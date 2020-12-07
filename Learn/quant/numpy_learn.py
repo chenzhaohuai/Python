@@ -60,6 +60,7 @@ def buy_lower(stock):
     buy=stock_day[stock][days-keep_days:days].cumsum()
     #绘制从第450天到500天中股票的走势图
     axs[1].plot(np.arange(days-keep_days,days),buy)
+
     #返回从第450天开始到第500天计算盈亏的盈亏序列的最后一个值
     return buy[-1]
 #假设等权重地买入3只股票
@@ -69,3 +70,4 @@ for stock in stock_lower:
     #profit即三只股票从第250天买入开始计算，直到最后一天的盈亏比例
     profit+=buy_lower(stock)
     print("买入第{}只股票，从第250个交易日开始持有盈亏：{:.2f}%".format(stock,profit))
+plt.show()
